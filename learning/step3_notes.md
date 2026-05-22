@@ -567,5 +567,363 @@ Functions should:
 - return values cleanly
 - avoid depending heavily on globals
 ===================================
+# 📅 Day 21 — Reusable Systems
+
+# 🎯 Goal
+
+Learn how to combine multiple reusable functions into organized systems.
+
+---
+
+# ✅ What is a Reusable System?
+
+A reusable system is a program built using multiple small reusable functions.
+
+Benefits:
+- cleaner code
+- easier debugging
+- better organization
+- easier expansion
+
+---
+
+# ✅ Utility Functions
+
+Utility functions are reusable helper tools.
+
+Example:
+
+```python
+def find_square(num):
+    return num ** 2
+```
+
+---
+
+# ✅ Modular Programming
+
+Large programs should be split into:
+- input section
+- processing functions
+- output section
+
+Example flow:
+
+```text
+INPUT
+↓
+FUNCTION PROCESSING
+↓
+OUTPUT
+```
+
+---
+
+# ✅ One Function = One Responsibility
+
+Good:
+
+```python
+find_square()
+```
+
+Bad:
+
+```python
+do_everything()
+```
+
+Functions should focus on one clear task.
+
+---
+
+# ✅ Reusable Thinking
+
+Reusable functions reduce repetition.
+
+Instead of:
+
+```python
+print(a + b)
+print(x + y)
+```
+
+Use:
+
+```python
+def add(a, b):
+    return a + b
+```
+
+---
+
+# ✅ main() Function
+
+`main()` helps organize:
+- program execution
+- input flow
+- output flow
+
+Example:
+
+```python
+def main():
+    pass
+```
+
+---
+
+# ✅ Common Mistakes
+
+- huge messy functions
+- repeated logic
+- mixing input and processing badly
+- unclear function names
+
+---
+
+# ✅ Best Practices
+
+- use meaningful names
+- keep functions small
+- return values properly
+- separate responsibilities
+- organize program flow clearly
+
+---
+
+# 🧠 Key Learning
+
+Functions can work together to build complete reusable systems.
 ===================================
+# 📅 Day 22 — Step 3 Final Project
+# Modular Calculator System
+
+# 🎯 Goal
+
+Combine all Step 3 concepts into one modular application.
+
+Topics integrated:
+- functions
+- parameters
+- return values
+- scope
+- reusable systems
+- loops
+- conditions
+
+---
+
+# ✅ Project Structure
+
+The calculator system was built using multiple reusable functions.
+
+Functions used:
+- show_menu()
+- add()
+- subtract()
+- multiply()
+- divide()
+- main()
+
+---
+
+# ✅ Menu System
+
+Example:
+
+```python
+def show_menu():
+
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
+```
+
+Menus help organize user interaction.
+
+---
+
+# ✅ Reusable Calculator Functions
+
+Example:
+
+```python
+def add(a, b):
+    return a + b
+```
+
+Benefits:
+- reusable
+- clean
+- modular
+- easier debugging
+
+---
+
+# ✅ Main Program Controller
+
+`main()` controls:
+- menu flow
+- user input
+- function calling
+- output display
+
+Example:
+
+```python
+def main():
+    while True:
+        pass
+```
+
+---
+
+# ✅ Infinite Loop System
+
+```python
+while True:
+```
+
+Keeps program running continuously until user exits.
+
+---
+
+# ✅ break Statement
+
+```python
+break
+```
+
+Stops loop execution.
+
+Without `break`:
+- program never exits
+- infinite loop continues
+
+---
+
+# ✅ Input Validation
+
+Example:
+
+```python
+float(input())
+```
+
+Allows decimal number input.
+
+---
+
+# ❌ Common Error — ValueError
+
+Example:
+
+```python
+float("hello")
+```
+
+Error occurs because:
+- "hello" is not a valid number
+
+---
+
+# ✅ Division Safety
+
+```python
+if b == 0:
+    return "Cannot divide by zero"
+```
+
+Prevents runtime errors.
+
+---
+
+# ❌ Common Error — TypeError
+
+Example:
+
+```python
+add()
+```
+
+Error occurs because:
+- required parameters are missing
+
+Correct:
+
+```python
+add(10, 20)
+```
+
+---
+
+# ✅ Program Architecture
+
+Good program structure:
+
+```text
+MENU
+↓
+INPUT
+↓
+FUNCTION PROCESSING
+↓
+OUTPUT
+↓
+REPEAT
+```
+
+---
+
+# ✅ Best Practices Learned
+
+- keep functions small
+- one function = one responsibility
+- use return values properly
+- avoid repeated code
+- separate input and processing
+- use meaningful names
+- build reusable systems
+
+---
+
+# ✅ Step 3 Major Concepts Learned
+
+## Day 17
+Function basics
+
+## Day 18
+Parameters & arguments
+
+## Day 19
+Return keyword
+
+## Day 20
+Variable scope
+
+## Day 21
+Reusable systems
+
+## Day 22
+Full modular integration
+
+---
+
+# 🧠 Final Step 3 Achievement
+
+By the end of Step 3, you can now:
+- write reusable functions
+- organize larger programs
+- reduce repetition
+- build modular systems
+- use return values properly
+- understand scope
+- think like a developer
+
+---
+
+# 🎉 Step 3 Completed Successfully
 ===================================
