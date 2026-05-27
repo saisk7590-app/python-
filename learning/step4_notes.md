@@ -298,9 +298,152 @@ students = ["Sai", "Rahul"]
 
 This is scalable programming thinking.
 ===================================
+# 📅 Day 24 — List Methods
 
+# 🔹 append()
+Adds item at end of list.
+
+```python
+tasks.append("study")
+```
+
+---
+
+# 🔹 insert()
+Adds item at specific position.
+
+```python
+tasks.insert(1, "gym")
+```
+
+---
+
+# 🔹 remove()
+Removes item by value.
+
+```python
+tasks.remove("gym")
+```
+
+---
+
+# 🔹 pop()
+Removes item by index (default last item).
+
+```python
+tasks.pop()
+```
+
+---
+
+# 🔹 clear()
+Removes all items.
+
+```python
+tasks.clear()
+```
+
+---
+
+# 🔹 sort()
+Sorts list in ascending order.
+
+```python
+numbers.sort()
+```
+
+---
+
+# 🔹 reverse()
+Reverses list order.
+
+```python
+numbers.reverse()
+```
+
+---
+
+# ⚠️ Key Mistakes
+
+- remove() needs exact value
+- pop() uses index (or default last)
+- clear() deletes everything permanently
+
+---
+
+# 💡 Real Usage
+
+Used in:
+- task managers
+- admin systems
+- dashboards
+- apps
+- automation tools
 ===================================
+# 📅 Day 25 — Loops with Lists (Data Processing)
 
+# 🔹 List Input System
+
+```python
+marks = []
+for i in range(5):
+    mark = int(input())
+    marks.append(mark)
+```
+
+---
+
+# 🔹 Total Calculation
+
+```python
+total = 0
+for mark in marks:
+    total += mark
+```
+
+---
+
+# 🔹 Average Calculation
+
+```python
+average = total / len(marks)
+```
+
+---
+
+# 🔹 Maximum Value
+
+```python
+highest = marks[0]
+for mark in marks:
+    if mark > highest:
+        highest = mark
+```
+
+---
+
+# 🔹 Minimum Value
+
+```python
+lowest = marks[0]
+for mark in marks:
+    if mark < lowest:
+        lowest = mark
+```
+
+---
+
+# 💡 Key Concept
+
+We use loops to process collections of data instead of handling values manually.
+
+---
+
+# ⚠️ Common Mistakes
+
+- Using sum(), max(), min() too early
+- Not initializing max/min properly
+- Forgetting list length for average
 ===================================
 
 ===================================
