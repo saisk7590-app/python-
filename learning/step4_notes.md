@@ -445,17 +445,495 @@ We use loops to process collections of data instead of handling values manually.
 - Not initializing max/min properly
 - Forgetting list length for average
 ===================================
+# 📅 Day 26 — Tuples
 
+# 🔹 What is a Tuple?
+
+A tuple is an immutable collection.
+
+Example:
+
+```python
+student = ("Sai", 21, "Python")
+```
+
+---
+
+# 🔹 Tuple Syntax
+
+Uses parentheses:
+
+```python
+()
+```
+
+---
+
+# 🔹 Tuple vs List
+
+| Feature | List | Tuple |
+|--------|------|------|
+| Syntax | [] | () |
+| Mutable | Yes | No |
+| Change values | Allowed | Not allowed |
+
+---
+
+# 🔹 Accessing Tuple Values
+
+```python
+student[0]
+```
+
+---
+
+# 🔹 Tuple Unpacking
+
+```python
+name, age, course = student
+```
+
+---
+
+# 🔹 Looping Through Tuples
+
+```python
+for value in tuple:
+    print(value)
+```
+
+---
+
+# 🔹 Dynamic Tuple Building
+
+```python
+numbers += (num,)
+```
+
+Creates new tuple each time.
+
+---
+
+# ⚠️ Important Rules
+
+- Tuples cannot be modified
+- Single-value tuple needs comma
+
+Correct:
+
+```python
+(5,)
+```
+
+Wrong:
+
+```python
+(5)
+```
+
+---
+
+# 💡 Real-World Usage
+
+Used in:
+- coordinates
+- database records
+- API responses
+- fixed configurations
 ===================================
+# 📅 Day 27 — Dictionaries
 
+# 🔹 What is a Dictionary?
+
+A dictionary stores data using:
+
+```python
+key : value
+```
+
+Example:
+
+```python
+student = {
+    "name": "Sai",
+    "age": 21
+}
+```
+
+---
+
+# 🔹 Dictionary Syntax
+
+Uses curly braces:
+
+```python
+{ }
+```
+
+---
+
+# 🔹 Accessing Values
+
+```python
+student["name"]
+```
+
+---
+
+# 🔹 Updating Values
+
+```python
+student["age"] = 22
+```
+
+---
+
+# 🔹 Adding New Key
+
+```python
+student["city"] = "Hyderabad"
+```
+
+---
+
+# 🔹 Removing Key
+
+```python
+student.pop("course")
+```
+
+---
+
+# 🔹 Looping Through Dictionary
+
+## Keys
+
+```python
+for key in student:
+    print(key)
+```
+
+---
+
+## Values
+
+```python
+for value in student.values():
+    print(value)
+```
+
+---
+
+## Key + Value
+
+```python
+for key, value in student.items():
+    print(key, value)
+```
+
+---
+
+# 🔹 Raw Dictionary Output
+
+```python
+print(student)
+```
+
+---
+
+# 🔹 Formatted Dictionary Output
+
+```python
+for key, value in student.items():
+    print(f"{key}: {value}")
+```
+
+---
+
+# ⚠️ Common Mistakes
+
+- Using wrong key name
+- Duplicate keys overwrite old values
+- Forgetting quotes around string keys
+
+---
+
+# 💡 Real-World Usage
+
+Used in:
+- APIs
+- databases
+- JSON
+- backend systems
+- user profiles
+- dashboards
 ===================================
+# 📅 Day 28 — Nested Dictionaries
 
+# 🔹 What is a Nested Dictionary?
+
+A dictionary inside another dictionary.
+
+Example:
+
+```python
+students = {
+    "student1": {
+        "name": "Sai",
+        "age": 21
+    }
+}
+```
+
+---
+
+# 🔹 Access Nested Values
+
+```python
+students["student1"]["name"]
+```
+
+---
+
+# 🔹 Update Nested Values
+
+```python
+students["student1"]["age"] = 22
+```
+
+---
+
+# 🔹 Add New Record
+
+```python
+students["student2"] = {
+    "name": "Ravi",
+    "age": 20
+}
+```
+
+---
+
+# 🔹 Loop Nested Dictionary
+
+```python
+for key, value in students.items():
+```
+
+---
+
+# 🔹 Nested Looping
+
+```python
+for student_id, details in students.items():
+    for key, value in details.items():
+        print(key, value)
+```
+
+---
+
+# ⚠️ Common Mistakes
+
+- Wrong nested access
+- Forgetting inner dictionary keys
+- Confusing outer vs inner dictionary
+
+---
+
+# 💡 Real-World Usage
+
+Used in:
+- contact books
+- databases
+- JSON APIs
+- dashboards
+- backend systems
 ===================================
+# 📅 Day 29 — Sets
 
+# 🔹 What is a Set?
+
+A set stores:
+- unique values only
+- unordered data
+
+Example:
+
+```python
+numbers = {1, 2, 3}
+```
+
+---
+
+# 🔹 Duplicate Removal
+
+```python
+numbers = {1, 1, 2, 2}
+
+print(numbers)
+```
+
+Output:
+
+```python
+{1, 2}
+```
+
+---
+
+# 🔹 Empty Set
+
+Correct:
+
+```python
+set()
+```
+
+Wrong:
+
+```python
+{}
+```
+
+because `{}` creates dictionary.
+
+---
+
+# 🔹 Add Values
+
+```python
+names.add("Sai")
+```
+
+---
+
+# 🔹 Remove Values
+
+```python
+names.remove("Sai")
+```
+
+---
+
+# 🔹 Membership Checking
+
+```python
+if "Sai" in names:
+```
+
+---
+
+# 🔹 Loop Through Set
+
+```python
+for item in names:
+    print(item)
+```
+
+---
+
+# 🔹 Convert List → Set
+
+```python
+numbers = [1, 2, 2, 3]
+
+unique_numbers = set(numbers)
+```
+
+---
+
+# ⚠️ Important Rules
+
+- sets are unordered
+- duplicate values removed automatically
+- sets store unique data only
+
+---
+
+# 💡 Real-World Usage
+
+Used in:
+- unique usernames
+- attendance systems
+- tags
+- search systems
+- duplicate removal systems
 ===================================
+# 🔥 Step 4 Final Project — Student Management System
 
-===================================
+# Concepts Used
 
-===================================
+- nested dictionaries
+- loops
+- conditions
+- sets
+- CRUD operations
+- structured data handling
 
+---
+
+# Features Built
+
+- Add student
+- View students
+- Search student
+- Update student
+- Delete student
+- Unique course tracking
+
+---
+
+# Important Learning
+
+Step 4 taught:
+- collection thinking
+- structured records
+- multi-record management
+- scalable data handling
+- database-style logic
+
+---
+
+# Most Important Data Structures
+
+| Structure | Purpose |
+|---        |---      |
+| list      | ordered collections |
+| tuple     | fixed records |
+| dictionary | key-value storage |
+| nested dictionary | multi-record systems |
+| set | unique values |
+
+---
+
+# Final Achievement
+
+Can now build:
+- contact systems
+- student systems
+- inventory systems
+- small database-style programs
+
+# 🔍 Data Structure Comparison
+
+| Feature | List | Tuple | Set | Dictionary |
+|---|---|---|---|---|
+| Syntax | `[]` | `()` | `{}` / `set()` | `{key:value}` |
+| Ordered? | ✅ Yes | ✅ Yes | ❌ No | ✅ Yes |
+| Changeable? | ✅ Yes | ❌ No | ✅ Yes | ✅ Yes |
+| Allows Duplicates? | ✅ Yes | ✅ Yes | ❌ No | ❌ Duplicate keys |
+| Indexing Supported? | ✅ Yes | ✅ Yes | ❌ No | By key only |
+| Fast Searching? | Medium | Medium | ✅ Very Fast | ✅ Very Fast |
+| Stores Data As | Items | Fixed items | Unique items | Key-value pairs |
+| Mutable / Immutable | Mutable | Immutable | Mutable | Mutable |
+| Best Use Case | General storage | Fixed data | Unique values | Structured data |
+
+---
+
+# 🧠 Quick Memory Trick
+
+- List → dynamic collection
+- Tuple → fixed collection
+- Set → unique collection
+- Dictionary → labeled structured data
 ===================================
